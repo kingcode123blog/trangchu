@@ -1,0 +1,141 @@
+body{
+	padding: 0;
+	margin:0;
+	background-size: cover;
+	background-position-y:-100px;
+
+	font-family:'Segoe UI', Tahoma , Geneva , Verdana , sans-serif;	
+	color: #000;
+	font-size: 0.95rem;
+	background-color:#fff;
+}
+#banner{
+	background:url(2.jpg);
+	min-height:400px;
+	width: 100%;
+	background-size: cover;
+}
+/*thụt chữ vào giữa*/
+.container{
+	max-width:960px;
+	margin: 0px auto;
+}
+#header{
+background-color: #131921;
+}
+/*cố định header*/
+header{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+}
+nav{
+	display:flex ;
+	justify-content: space-around;
+	justify-items: center;
+}
+#logo{
+	padding:5px 0px;
+	display: flex;
+}
+#logo img{
+	max-width: 40px;
+	height:auto;
+}
+#main-menu{
+	display:flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#main-menu li{
+	position: relative;
+}
+#main-menu li a{
+	text-transform:uppercase;
+	color:#f8f8f8;
+	display: block;
+	padding: 18px 20px;
+	text-decoration:none;
+}
+#main-menu ul.sub-menu{
+	position:absolute;
+	background-color: #131921;
+	padding:15px 0px;
+	list-style: none;
+	width: 150px;
+	border: 1px solid #434343;
+	top:56px;
+	display: none;
+}
+#main-menu li:hover>ul.sub-menu{
+	display: block;
+}
+#main-menu ul.sub-menu a{
+	padding: 8px 15px;
+	border-bottom: 1px solid #434343;
+	left:0;
+}
+#main-menu ul.sub-menu li:hover>a{
+	border-bottom: 1px solid #6e6e6e;
+}
+#main-menu ul.sub-menu li:last-child a{
+	border:none;
+}
+#main-menu ul.sub-menu li a{
+	border-bottom: 1px solid #434343;
+}
+#main-menu ul.sub-menu ul.sub-menu{
+	left:151.75px;
+	top:-16px;
+}
+#content h1{
+	padding:30px 0px;
+}
+#content p{
+	margin-bottom: 1.2rem;
+}
+/*Thiet lap boder khi hover*/
+#main-menu>li>a{
+	position: relative;
+}
+#main-menu>li>a::before{
+	content: "";
+	height: 4px;
+	width: 0px;
+	background: red;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu>li:hover>a::before{
+	width: 100%;
+}
+#main-menu>li.has-child::after{
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	content: "\f107";
+	color:#f5f5f5;
+	position:absolute;
+	top:0px;
+	right: 0px;
+	padding: 18px 0px;
+}
+#main-menu .sub-menu li:hover>a{
+	color:crimson;
+}
+#main-menu .sub-menu>li.has-child::after{
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: 900;
+	content: "\f105";
+	color:#f5f5f5;
+	position:absolute;
+	top:2px;
+	right: 5px;
+	padding: 8px 0px;
+}
+#main-menu .sub-menu>li.has-child:hover::after{
+color: crimson;
+}
